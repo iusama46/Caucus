@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "624823754794",
+    "project_id": "fluttefiremeet",
+    "storage_bucket": "fluttefiremeet.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:624823754794:android:a9c38063456cf51db56353",
+        "android_client_info": {
+          "package_name": "com.example.the_final_app_caucus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "624823754794-upn9rrhs4omvfdmi1a7nos9dcb1b0na8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.the_final_app_caucus",
+            "certificate_hash": "660b5e0b4e93f14526b9493d26c1185edefe0ad6"
+          }
+        },
+        {
+          "client_id": "624823754794-4vkru1opis1ij6hgg6d5im0k8tkn8no8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxerL7v8kpVxfQJFNT2plAA1-JLO0kqaM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "624823754794-4vkru1opis1ij6hgg6d5im0k8tkn8no8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
