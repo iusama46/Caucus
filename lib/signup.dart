@@ -29,10 +29,10 @@ class _SignUpState extends State<SignUp> with SingleTickerProviderStateMixin {
   Future createUser(String name, String email, String password) async {
     FocusScope.of(context).requestFocus(FocusNode());
 
-    // if(!verify()){
-    //   Utils.showToast('Unable to verify email');
-    //   return;
-    // }
+    if(name.isEmpty || password.isEmpty||email.isEmpty){
+      Utils.showToast('All fields required');
+      return;
+    }
     isLoading = true;
     setState(() {});
     try {

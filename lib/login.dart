@@ -23,13 +23,18 @@ class LoginPageState extends State<LoginPage>
   user_model us = new user_model();
   String user_pass = "";
 
-  login(email) async {
+  login() async {
     FocusScope.of(context).requestFocus(FocusNode());
+
+    if(emailTC.text.isEmpty || pass.text.isEmpty){
+      Utils.showToast("All Fields are Required ");
+      return;
+    }
     try {
       UserCredential userCredential = await FirebaseAuth.instance
           .signInWithEmailAndPassword(email: emailTC.text, password: pass.text);
 
-      final user = ParseUser(userCredential.user!.uid, userCredential.user!.uid, email);
+      final user = ParseUser(userCredential.user!.uid, userCredential.user!.uid, emailTC.text.toString());
       var response = await user.login();
       if (response.success) {
 
@@ -42,7 +47,6 @@ class LoginPageState extends State<LoginPage>
           FirebaseAuth.instance.signOut();
         }catch(e){}
       }
-
 
     } on FirebaseAuthException catch (e) {
       if (e.code == 'user-not-found') {
@@ -149,16 +153,7 @@ class LoginPageState extends State<LoginPage>
                             child: new Text("Login"),
                             onPressed: () async {
                               print(emailTC.text);
-                              await login(emailTC.text);
-                              if (pass.text == user_pass.toString()) {
-                                //pass.text==user_pass.toString()
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => Dashboard()));
-                              } else {
-                                print("invalid");
-                              }
+                              await login();
                             },
                             splashColor: Colors.blueAccent,
                           ),

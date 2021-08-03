@@ -45,7 +45,9 @@ dependencies:
   share_plus: ^2.1.4
   wakelock: ^0.5.2
   jitsi_meet:
-    path: ./sdk/
+    git:
+      url: https://github.com/iusama46/jitsi_meet-customized.git
+      ref: ui
   intl: ^0.17.0
   email_auth: ^0.0.1+4
   parse_server_sdk_flutter: ^3.1.0
@@ -54,6 +56,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  #flutter_native_splash: ^1.2.0
   integration_test:
     sdk: flutter
 

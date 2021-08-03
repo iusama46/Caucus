@@ -5,6 +5,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:jitsi_meet/jitsi_meet.dart';
+import 'package:share_plus/share_plus.dart';
 import 'package:the_final_app_caucus/attendance.dart';
 import 'package:the_final_app_caucus/models/meeting.dart';
 import 'package:the_final_app_caucus/models/user.dart';
@@ -61,7 +62,6 @@ class _MeetingScreenState extends State<MeetingScreen>
       featureFlags[FeatureFlagEnum.MEETING_PASSWORD_ENABLED] = false;
       featureFlags[FeatureFlagEnum.PIP_ENABLED] = false;
       featureFlags[FeatureFlagEnum.CLOSE_CAPTIONS_ENABLED] = false;
-      featureFlags[FeatureFlagEnum.RECORDING_ENABLED] = false;
       featureFlags[FeatureFlagEnum.RAISE_HAND_ENABLED] = false;
       if (!widget.meeting.isHost) {
         featureFlags[FeatureFlagEnum.OVERFLOW_MENU_ENABLED] = false;
@@ -125,6 +125,8 @@ class _MeetingScreenState extends State<MeetingScreen>
                 'uId': widget.user.id
               });
             }
+
+            Share.share('Join meeting on Caucus \nMeeting ID: ${widget.meeting.id}\n ${widget.meeting.url}');
           },
           onConferenceTerminated: (message) {
             debugPrint("${options.room} terminated with message: $message");

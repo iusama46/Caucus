@@ -100,6 +100,9 @@ class _AttendanceScreenState extends State<AttendanceScreen> {
             builder: (context, snapshot) {
               if (snapshot.hasError ||
                   !snapshot.hasData ) {
+
+                print('clima');
+                print(snapshot.error.toString());
                 return Center(
                   child: Text(
                     'Loading...',

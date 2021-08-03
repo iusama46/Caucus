@@ -328,16 +328,20 @@ packages:
   jitsi_meet:
     dependency: "direct main"
     description:
-      path: sdk
-      relative: true
-    source: path
+      path: "."
+      ref: ui
+      resolved-ref: "988fdc427ed206a59f2499d2006c70471556ec9f"
+      url: "https://github.com/iusama46/jitsi_meet-customized.git"
+    source: git
     version: "4.0.0"
   jitsi_meet_platform_interface:
     dependency: transitive
     description:
-      path: "sdk/ui"
-      relative: true
-    source: path
+      path: "."
+      ref: HEAD
+      resolved-ref: e1317670a24b120466f3d8d6228258ceed025872
+      url: "https://github.com/iusama46/meet_jitsi_ui.git"
+    source: git
     version: "2.0.0"
   js:
     dependency: transitive
