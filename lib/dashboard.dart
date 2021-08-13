@@ -12,7 +12,7 @@ import 'package:the_final_app_caucus/login.dart';
 import 'package:the_final_app_caucus/main_attendance_screen.dart';
 
 import 'calendar.dart';
-import 'classroomfolders.dart';
+import 'classroom_folders_screen.dart';
 import 'create_meeting_screen.dart';
 
 class Dashboard extends StatefulWidget {
@@ -106,7 +106,7 @@ class _DashboardState extends State<Dashboard>
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => Classroomfolders()));
+                          builder: (context) => ClassroomFolderScreen()));
                 },
               ),
               ListTile(
@@ -142,7 +142,7 @@ class _DashboardState extends State<Dashboard>
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => Classroomfolders()));
+                            builder: (context) => ClassroomFolderScreen()));
                   }),
               ListTile(
                 leading: Icon(Icons.arrow_downward),
